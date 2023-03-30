@@ -1,0 +1,9 @@
+:root {
+    --multiplier: 1.25;
+    --text-base: 18px; /* body, h6 */
+    --text-lg: calc(var(--multiplier) * var(--text-base)); /* h5 */
+    --text-xl: calc(var(--multiplier) * var(--text-lg)); /* h4 */
+    --text-2xl: calc(var(--multiplier) * var(--text-xl)); /* h3 */
+    --text-3xl: calc(var(--multiplier) * var(--text-2xl)); /* h2 */
+    --text-4xl: calc(var(--multiplier) * var(--text-3xl)); /* h1 */
+  }

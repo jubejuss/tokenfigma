@@ -240,3 +240,23 @@ module.exports = colors;
 Töötav lahendus on tokensHsl-working-one-theme.js, mis töötab koos tokensHsl.json-iga. See setup on ühe teema jaoks.
 
 ## kahe teemaga lahendus
+
+vt diplimitöö dokust
+
+## Custom css 
+Et enda loodud css, mis on mitmes failis, tööle hakkaks, tuleks installeerida PostCSS-import moodul:
+`npm install -D postcss-import`
+
+```js
+// postcss.config.js
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+```
+**NB! Oluline sel juhul, et peamises css failsi oleksid @import lingid faili alguses
+**
+vt: https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports

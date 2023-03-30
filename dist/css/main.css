@@ -1,6 +1,20 @@
-/*
-! tailwindcss v3.3.0 | MIT License | https://tailwindcss.com
-*/
+:root {
+  --multiplier: 1.25;
+  --text-base: 18px;
+  /* body, h6 */
+  --text-lg: calc(var(--multiplier) * var(--text-base));
+  /* h5 */
+  --text-xl: calc(var(--multiplier) * var(--text-lg));
+  /* h4 */
+  --text-2xl: calc(var(--multiplier) * var(--text-xl));
+  /* h3 */
+  --text-3xl: calc(var(--multiplier) * var(--text-2xl));
+  /* h2 */
+  --text-4xl: calc(var(--multiplier) * var(--text-3xl));
+  /* h1 */
+}
+
+/* ! tailwindcss v3.3.0 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -669,6 +683,11 @@ video {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
+.text-primary-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 13 38 / var(--tw-text-opacity));
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -689,10 +708,23 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body {
-  /* amination */
-  transition: all 0.5s ease;
+h1 {
+  font-size: var(--text-4xl);
 }
+
+p {
+  font-size: var(--text-base);
+}
+
+/* base is for basic elements */
+
+/* see blokib illegiüpärast */
+
+/* @layer base {
+  body {
+      @apply var(--text-base) transition: all 0.5s ease;;
+  }
+} */
 
 :is(.dark .dark\:justify-end) {
   justify-content: flex-end;
@@ -707,3 +739,5 @@ body {
   --tw-text-opacity: 1;
   color: rgb(221 217 242 / var(--tw-text-opacity));
 }
+
+

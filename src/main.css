@@ -1,8 +1,20 @@
+
+@import url(variables.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* amination */
-  transition: all 0.5s ease;
+h1 {
+  font-size: var(--text-4xl);
 }
+p { font-size: var(--text-base); }
+
+/* base is for basic elements */
+/* see blokib millegiüpärast */
+/* @layer base {
+  body {
+      @apply var(--text-base) transition: all 0.5s ease;;
+  }
+} */
+
+
