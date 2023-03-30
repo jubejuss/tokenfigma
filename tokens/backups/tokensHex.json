@@ -1,0 +1,30 @@
+{
+  "primary": {
+    "100": {
+      "value": "#ddd9f2",
+      "type": "color"
+    },
+    "500": {
+      "value": "#5540bf",
+      "type": "color"
+    },
+    "900": {
+      "value": "#110d26",
+      "type": "color"
+    }
+  },
+  "secondary": {
+    "100": {
+      "value": "#e0a7b4",
+      "type": "color"
+    },
+    "500": {
+      "value": "#c43c3c",
+      "type": "color"
+    },
+    "900": {
+      "value": "#530000",
+      "type": "color"
+    }
+  }
+}

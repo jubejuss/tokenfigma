@@ -1,0 +1,20 @@
+{
+  "primary": {
+    "100": {
+      "value": "hsl({primary.hue}, 50%, 10%)",
+      "type": "color"
+    },
+    "500": {
+      "value": "hsl({primary.hue}, 40%, 50%)",
+      "type": "color"
+    },
+    "900": {
+      "value": "hsl({primary.hue}, 50%, 90%)",
+      "type": "color"
+    },
+    "hue": {
+      "value": "250",
+      "type": "color"
+    }
+  }
+}

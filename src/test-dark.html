@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Dark and Light Mode Example</title>
+    <!-- Load Tailwind CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.1.2/dist/tailwind.min.css" />
+    <!-- Set default color mode to dark -->
+    <link rel="stylesheet" href="./css/dark.css" />
+</head>
+
+<body>
+    <!-- Dark/Light mode switch button -->
+    <div class="fixed top-0 right-0 p-4">
+        <button id="color-mode-toggle" class="bg-gray-800 rounded-full w-12 h-6" aria-label="Toggle color mode">
+            <div class="bg-white shadow-md rounded-full w-5 h-5 transform duration-300 ease-in-out"></div>
+        </button>
+    </div>
+    <!-- Page content -->
+    <div class="container mx-auto py-10">
+        <h1 class="text-4xl font-bold mb-4">Hello, World!</h1>
+        <p class="text-gray-700 leading-relaxed">
+            This is a simple example of using Tailwind's dark and light mode with a
+            switch button to toggle between them.
+        </p>
+    </div>
+    <!-- Load JavaScript to toggle color mode -->
+    <script>
+        const toggle = document.getElementById('color-mode-toggle');
+        const currentTheme = localStorage.getItem('color-mode');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-color-mode', currentTheme);
+            if (currentTheme === 'dark') {
+                toggle.classList.add('bg-gray-800');
+                toggle.classList.remove('bg-gray-300');
+            } else {
+                toggle.classList.add('bg-gray-300');
+                toggle.classList.remove('bg-gray-800');
+            }
+        }
+        toggle.addEventListener('click', () => {
+            const colorMode = document.documentElement.getAttribute('data-color-mode');
+            if (colorMode === 'dark') {
+                localStorage.setItem('color-mode', 'light');
+                document.documentElement.setAttribute('data-color-mode', 'light');
+                toggle.classList.add('bg-gray-300');
+                toggle.classList.remove('bg-gray-800');
+            } else {
+                localStorage.setItem('color-mode', 'dark');
+                document.documentElement.setAttribute('data-color-mode', 'dark');
+                toggle.classList.add('bg-gray-800');
+                toggle.classList.remove('bg-gray-300');
+            }
+        });
+    </script>
+</body>
+
+</html>

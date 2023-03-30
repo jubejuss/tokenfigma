@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body {
-    background-color: bisque;
+  /* amination */
+  transition: all 0.5s ease;
 }
